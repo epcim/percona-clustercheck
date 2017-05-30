@@ -92,7 +92,7 @@ if [[ $mysql_ret -eq 1 || $mysql_ret -eq 127 ]]; then
         # mysql program not found
         # => return HTTP 404
         # Shell return-code is 3
-        httpReply "404" "Mysql command not found.\r\n"
+        httpReply "404" "Mysql command not found or service is not running.\r\n"
         exit 2
     fi
 
